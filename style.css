@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: hsl(244, 38%, 16%);
+  margin: 0 20px;
+  width: 700px;
+  min-width: 700px;
+  border-radius: 10px;
+}
+
+.container__content {
+  width: 50%;
+  padding: 20px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.container__image {
+  width: 50%;
+  background: url('./images/image-header-desktop.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: hsla(280, 85%, 25%, 0.6);
+}
+
+.content__info,
+.content__numbers {
+  padding: 0 50px;
+}
+
+.content__info h1 {
+  font-size: 23px;
+  margin: 20px 0;
+}
+
+.content__info strong {
+  color: hsl(277, 64%, 61%);
+}
+
+.content__info p {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.content__numbers {
+  display: flex;
+  gap: 30px;
+  text-transform: uppercase;
+}
+
+.content__numbers p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.content__numbers em {
+  font-style: normal;
+  font-size: 10px;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.numbers__companies,
+.numbers__templates,
+.numbers__queries {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 300px;
+    min-width: 300px;
+  }
+
+  .container__content {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 0;
+  }
+
+  .container__image {
+    width: 100%;
+    height: 250px;
+    background: url('./images/image-header-mobile.jpg') no-repeat;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .image__overlay {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .content__numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content__info,
+  .content__numbers {
+    padding: 20px;
+  }
+
+  .content__info h1 {
+    font-size: 25px;
+  }
+
+  .content__info p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .content__numbers p {
+    font-size: 23px;
+  }
+
+  .content__numbers em {
+    font-size: 12px;
+  }
+}
